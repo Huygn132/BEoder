@@ -20,3 +20,7 @@ Route::get('search', 'App\Http\Controllers\ProjectController@search')->name('pro
 Route::post('search', 'App\Http\Controllers\ProjectController@handleSearch')->name('project.handleSearch');
 Route::get('/order-detail/{id}', 'App\Http\Controllers\ProjectController@showOrderDetail')->name('order.detail');
 Route::delete('/project/delete/{id}', 'App\Http\Controllers\ProjectController@delete')->name('project.delete');
+
+
+Route::get('/project/create', 'App\Http\Controllers\ProjectCreationController@create')->name('project.create');
+Route::post('/project/store', 'App\Http\Controllers\ProjectCreationController@store')->name('project.store');
